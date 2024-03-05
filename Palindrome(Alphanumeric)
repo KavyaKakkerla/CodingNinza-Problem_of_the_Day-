@@ -1,0 +1,26 @@
+import java.util.* ;
+
+//import com.sun.tools.javac.comp.Lower;
+
+import java.io.*; 
+public class Solution {
+
+	public static boolean checkPalindrome(String str) {
+	
+	    // WRITE YOUR CODE HERE	
+		String newString=str.replaceAll("[^a-zA-Z0-9]","").toLowerCase();
+		int n=newString.length();
+		char arr[]=newString.toCharArray();
+		for(int i=0;i<(n/2);i++)
+		{
+			if(arr[i]!=arr[n-i-1])
+			{
+				return false;
+			}
+			
+		}
+		return true;
+		
+	}
+
+}
